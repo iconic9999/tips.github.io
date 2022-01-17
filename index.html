@@ -107,13 +107,12 @@
         window.attachEvent("onmessage", handleIFrameMessage);
       }
       </script>
-      <script type="text/javascript">
-        window.onload = function() {
-          let frameElement = document.getElementById("JotFormIFrame-220154574509051");
-          let doc = frameElement.contentDocument;
-          doc.body.innerHTML = doc.body.innerHTML + '<style>.formFooter {display: none;}</style>';
-        }
-    </script>
+      <script>
+        var $ = jQuery.noConflict();
+        jQuery(document).ready(function(jQuery) { "use strict";
+        $('iframe').contents().find("head").append($("<style type='text/css'>  div.formFooter{ display:none !important; } .jf-branding{ display: none !important; } div.form-footer{ display: none !important; } </style>"));
+        });
+      </script>
 </body>
   
 </html>
