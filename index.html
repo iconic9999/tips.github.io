@@ -28,13 +28,6 @@
     >
     </iframe>
     <script type="text/javascript">
-        window.onload = function() {
-          let frameElement = document.getElementById("JotFormIFrame-220154574509051");
-          let doc = frameElement.contentDocument;
-          doc.body.innerHTML = doc.body.innerHTML + '<style>.formFooter {display: none;}</style>';
-        }
-    </script>
-    <script type="text/javascript">
       var ifr = document.getElementById("JotFormIFrame-220154574509051");
       if (ifr) {
         var src = ifr.src;
@@ -114,6 +107,13 @@
         window.attachEvent("onmessage", handleIFrameMessage);
       }
       </script>
+      <script type="text/javascript">
+        window.onload = function() {
+          let frameElement = document.getElementById("JotFormIFrame-220154574509051");
+          let doc = frameElement.contentDocument;
+          doc.body.innerHTML = doc.body.innerHTML + '<style>.formFooter {display: none;}</style>';
+        }
+    </script>
 </body>
   
 </html>
